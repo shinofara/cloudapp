@@ -12,8 +12,8 @@
     "functions": {
       "source": ".",
       "predeploy": [
-        "npm --prefix \"$PROJECT_DIR\" install",
-        "npm --prefix \"$PROJECT_DIR\" run build"
+        "yarn --cwd \"$PROJECT_DIR\" install",
+        "yarn --cwd \"$PROJECT_DIR\" run build"
       ],
       "runtime": "nodejs12"
     }
