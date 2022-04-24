@@ -2,19 +2,25 @@
   "name": "cloudapp",
   "version": "0.1.0",
   "private": true,
+  "main": "firebaseFunctions.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "next src/",
+    "build": "next build src/",
+    "start": "next start src/",
     "lint": "next lint",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci",
+    "deploy": "firebase deploy --only functions,hosting",
+    "logs": "firebase functions:log"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
+    "firebase-admin": "^9.4.2",
+    "firebase-functions": "^3.13.0",
     "jest": "^27.5.1",
     "next": "12.1.5",
+    "path": "^0.12.7",
     "react": "18.0.0",
     "react-dom": "18.0.0"
   },
@@ -24,6 +30,8 @@
     "@types/react-dom": "18.0.2",
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
-    "typescript": "4.6.3"
+    "typescript": "4.6.3",
+    "firebase-functions-test": "^0.2.3",
+    "firebase-tools": "^9.3.0"
   }
 }
