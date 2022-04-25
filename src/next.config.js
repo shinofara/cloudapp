@@ -2,6 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: '../.next',
+  swcMinify: false
 }
 
 module.exports = nextConfig
